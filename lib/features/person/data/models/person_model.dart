@@ -1,4 +1,4 @@
-import 'package:persons_app/person/domain/entities/person_entity.dart';
+import 'package:persons_app/features/person/domain/entities/person_entity.dart';
 
 class PersonModel extends Person {
   PersonModel({

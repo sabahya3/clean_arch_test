@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:persons_app/core/error/exceptions.dart';
 import 'package:persons_app/core/error/failure.dart';
-import 'package:persons_app/person/data/datasource/person_remote_data_source.dart';
-import 'package:persons_app/person/domain/entities/person_entity.dart';
-import 'package:persons_app/person/domain/repository/main_person_repository.dart';
-import 'package:persons_app/person/domain/use_cases/add_new_person.dart';
-import 'package:persons_app/person/domain/use_cases/delete_person.dart';
-import 'package:persons_app/person/domain/use_cases/get_person_by_id.dart';
-import 'package:persons_app/person/domain/use_cases/update_person.dart';
+import 'package:persons_app/features/person/data/datasource/person_remote_data_source.dart';
+import 'package:persons_app/features/person/domain/entities/person_entity.dart';
+import 'package:persons_app/features/person/domain/repository/main_person_repository.dart';
+import 'package:persons_app/features/person/domain/use_cases/add_new_person.dart';
+import 'package:persons_app/features/person/domain/use_cases/delete_person.dart';
+import 'package:persons_app/features/person/domain/use_cases/get_person_by_id.dart';
+import 'package:persons_app/features/person/domain/use_cases/update_person.dart';
 
 class PersonRepository extends MainPersonRepository {
   BasePersonRemoteDataSource basePersonRemoteDataSource;
