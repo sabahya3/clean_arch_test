@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:persons_app/core/error/exceptions.dart';
 import 'package:persons_app/core/network/error_message_model.dart';
-import 'package:persons_app/core/utils/api_constants.dart';
+import 'package:persons_app/core/network/api_constants.dart';
 
 import '../models/person_model.dart';
 

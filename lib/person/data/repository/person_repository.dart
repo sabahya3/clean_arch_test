@@ -40,7 +40,7 @@ class PersonRepository extends MainPersonRepository {
     try {
       return Right(result);
     } on ServerException catch (f) {
-      return Left(ServerFailure(f.errorMessageModel.message));
+      return Left(ServerFailure(message:f.errorMessageModel.message));
     }
   }
 
