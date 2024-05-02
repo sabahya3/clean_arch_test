@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:persons_app/core/services/service_locator.dart';
 import 'package:persons_app/core/usecase/base_usecase.dart';
-import 'package:persons_app/features/person/data/datasource/person_remote_data_source.dart';
-import 'package:persons_app/features/person/data/repository/person_repository.dart';
 import 'package:persons_app/features/person/domain/use_cases/get_all_persons.dart';
 
 void main() async {
-  final result =
-      await GetAllPersons(PersonRepository(PersonsHttpRemoteDataSource()))
-          .call(parameters: NoParams(), body: NoBody());
-  result.fold((l) => {print(l)}, (data) => print(data[0].name));
+  ServiceLocator().initialize();
+
+  final instance = sl<GetAllPersons>();
+  print(instance.hashCode);
+  final result = await instance(parameters: NoParams(), body: NoBody());
+
+  result.fold((l) => {print(l)}, (data) => print(data[0].age));
+
   runApp(const MyApp());
 }
 
